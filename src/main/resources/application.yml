@@ -1,0 +1,19 @@
+# application name
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jiangzhuolin/config-manage.git
+
+# server monitor port
+server:
+  port: 8181
+
+# eureka server cluster
+eureka:
+  client:
+    service-url:
+      defaultZone: http://hadoop1:8000/eureka/,http://hadoop2:8000/eureka/,http://hadoop3:8000/eureka/
